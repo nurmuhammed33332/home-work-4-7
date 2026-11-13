@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моё личное приложение со временем</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Моё время</h1>
+      <p class="subtitle">Часы, таймеры и важные моменты</p>
+      <p id="greeting"></p>
+
+      <section class="block">
+        <h2>Часы</h2>
+        <div id="clock" class="digits">00:00:00</div>
+        <div id="date"></div>
+      </section>
+
+      <section class="block new-year-block">
+        <h2>До Нового года осталось</h2>
+        <div class="new-year-count"><span id="newYearDays">0</span><span class="days-label">дней</span></div>
+      </section>
+
+      <section class="block">
+        <h2>Секундомер</h2>
+        <div id="stopwatch" class="digits">00:00.0</div>
+        <button id="swStart">Старт</button>
+        <button id="swStop">Стоп</button>
+        <button id="swReset">Сброс</button>
+        <button id="swLap">Круг</button>
+        <ol id="laps" class="laps" aria-label="Круги секундомера"></ol>
+      </section>
+
+      <section class="block">
+        <h2>Таймер</h2>
+        <input id="timerInput" type="number" min="1" value="10" /> сек.
+        <button id="timerStart">Старт</button>
+        <button id="timerReset">Сброс</button>
+        <div id="timerView" class="digits">00:10</div>
+        <p id="timerMsg"></p>
+      </section>
+
+      <section class="block">
+        <h2>Будильник</h2>
+        <label for="alarmInput">Время:</label>
+        <input id="alarmInput" type="time" />
+        <button id="alarmSet">Установить</button>
+        <p id="alarmMsg" aria-live="polite">Будильник не установлен</p>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
